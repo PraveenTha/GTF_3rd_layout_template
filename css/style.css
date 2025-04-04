@@ -820,6 +820,9 @@ footer#footer {
   .AKxYR5 svg {
     bottom: -9%;
   }
+  .popUpForm {
+    width: 30%;
+  }
 }
 
 @media only screen and (max-width: 1024px) {
@@ -843,6 +846,9 @@ footer#footer {
   .hero-section {
     position: relative;
     height: 62vh;
+  }
+  .popUpForm {
+    width: 35%;
   }
 }
 
@@ -943,6 +949,25 @@ footer#footer {
   .open_menu {
     display: block !important;
   }
+  .popUpForm {
+    width: 45%;
+  }
+  .section-p2 {
+    padding: 20px 25px;
+  }
+  .highlight-section {
+    height: 40vh;
+  }
+  .overview-section {
+    height: 63vh;
+  }
+  .overview-img {
+    width: 48%;
+    left: 5%;
+  }
+  .hero-info {
+    width: 95%;
+  }
 }
 
 @media only screen and (max-width: 991px) and (orientation: landscape) {
@@ -959,6 +984,79 @@ footer#footer {
   }
   .banner-slider {
     width: 95%;
+  }
+  .popUpForm {
+    width: 90%;
+    height: 100vh;
+    z-index: 99999;
+  }
+  .get-tuch {
+    padding: 8px;
+  }
+
+  .hero-section,
+  .overview-section,
+  .highlight-section,
+  .highlight-head,
+  .about-developer-section,
+  .get-tuch-section {
+    height: auto;
+  }
+  .hero-info,
+  .banner-slider,
+  span.loc_banner,
+  h3.heading,
+  .overview-img,
+  .overview-contant,
+  .highlit-contant {
+    position: static;
+  }
+  .banner-slider,
+  .hero-info,
+  h3.heading,
+  .overview-img,
+  .overview-contant,
+  .highlit-contant,
+  span.loc_banner {
+    transform: translate(0);
+  }
+  .hero-section::after,
+  .overview-section::after {
+    z-index: -1;
+  }
+  .section-p2 {
+    padding: 20px;
+  }
+  .overview-img,
+  .overview-contant {
+    width: 85%;
+  }
+  span.icon_img {
+    width: 50px;
+  }
+  .highlight-head,
+  .highlit-contant {
+    width: 100%;
+    padding: 10px;
+  }
+  .highlit-contant ul > li {
+    margin-bottom: 10px;
+  }
+  .AKxYR5 svg {
+    display: none;
+  }
+  .overview-contant {
+    background: #f2f2f2;
+    margin: 10px 0;
+    padding: 10px;
+    border: 10px solid #fff;
+  }
+  .overview-contant p {
+    text-align: justify;
+  }
+  .popUpForm {
+    width: 100%;
+    padding: 60px 10px;
   }
 }
 
@@ -1026,5 +1124,9 @@ footer#footer {
   .popUpForm {
     width: 100%;
     padding: 60px 10px;
+    overflow: auto;
+  }
+  .hero-info {
+    width: 100%;
   }
 }

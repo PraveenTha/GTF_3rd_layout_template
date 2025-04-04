@@ -5,17 +5,27 @@ document.addEventListener("DOMContentLoaded", function () {
     const popUpForm = document.querySelector(".popUpForm");
 
     if (window.pageYOffset > 100) {
+      // When scrolled down
       header.classList.add("sticky");
       popUpForm.classList.add("hide-popup");
       popUpForm.classList.remove("show-popup");
     } else {
+      // When at top
       header.classList.remove("sticky");
 
-      // Show popup only on first load for small screens
       if (window.innerWidth <= 767 && !sessionStorage.getItem("popupShown")) {
+        // Small screens: show once
         popUpForm.classList.add("show-popup");
         popUpForm.classList.remove("hide-popup");
         sessionStorage.setItem("popupShown", "true");
+      } else if (window.innerWidth >= 1100) {
+        // Large screens: always show at top
+        popUpForm.classList.add("show-popup");
+        popUpForm.classList.remove("hide-popup");
+      } else {
+        // For mid-range widths (768px to 991px): keep hidden
+        popUpForm.classList.add("hide-popup");
+        popUpForm.classList.remove("show-popup");
       }
     }
   });
