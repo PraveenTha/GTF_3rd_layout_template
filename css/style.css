@@ -1130,3 +1130,8 @@ footer#footer {
     width: 100%;
   }
 }
+@media only screen and (max-width: 767px) and (orientation: landscape) {
+  .hero-info {
+    width: 95%;
+  }
+}
