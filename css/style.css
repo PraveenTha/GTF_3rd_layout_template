@@ -965,9 +965,6 @@ footer#footer {
     width: 48%;
     left: 5%;
   }
-  .hero-info {
-    width: 95%;
-  }
 }
 
 @media only screen and (max-width: 991px) and (orientation: landscape) {
@@ -1057,6 +1054,9 @@ footer#footer {
   .popUpForm {
     width: 100%;
     padding: 60px 10px;
+  }
+  .hero-info {
+    width: 95%;
   }
 }
 
