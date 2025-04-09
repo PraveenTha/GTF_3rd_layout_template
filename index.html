@@ -713,22 +713,22 @@
         <div class="col-12">
           <form action="" class="form-section">
             <div class="input-group mt-3 mb-3">
-              <input type="text" id="name" class="get-tuch" required />
+              <input type="text"  id="qSenderNamemodal1" name="name" class="get-tuch" required />
               <label for="name" class="input-group_label">Name</label>
             </div>
 
             <div class="input-group mt-3 mb-3">
-              <input type="text" id="email" class="get-tuch" required />
+              <input type="text"  id="qEmailIDmodal1" name="email" class="get-tuch" required />
               <label for="email" class="input-group_label">email</label>
             </div>
 
             <div class="input-group mt-3 mb-3">
-              <input type="text" id="phone" class="get-tuch" required />
+              <input type="text"  id="qMobileNomodal1" name="phone" class="get-tuch" required />
               <label for="phone" class="input-group_label">phone</label>
             </div>
 
             <div class="input-group mt-3 mb-3">
-              <input type="text" id="message" class="get-tuch" required />
+              <input type="text"  id="qMessagemodal1" name="message..." class="get-tuch" required />
               <label for="message" class="input-group_label">Enter Message</label>
             </div>
 
@@ -827,23 +827,23 @@ close
         <div class="col-12">
           <form action="" class="form-section">
             <div class="input-group mt-3 mb-3">
-              <input type="text" id="pop_name" class="get-tuch" required />
-              <label for="pop_name" class="input-group_label">Name</label>
+               <input type="text"  id="qSenderNamemodal2" name="name" class="get-tuch" required />
+              <label for="name" class="input-group_label">Name</label>
             </div>
 
             <div class="input-group mt-3 mb-3">
-              <input type="text" id="pop_email" class="get-tuch" required />
-              <label for="pop_email" class="input-group_label">email</label>
+              <input type="text"  id="qEmailIDmodal2" name="email" class="get-tuch" required />
+              <label for="email" class="input-group_label">email</label>
             </div>
 
             <div class="input-group mt-3 mb-3">
-              <input type="text" id="pop_phone" class="get-tuch" required />
-              <label for="pop_phone" class="input-group_label">phone</label>
+               <input type="text"  id="qMobileNomodal2" name="phone" class="get-tuch" required />
+              <label for="phone" class="input-group_label">phone</label>
             </div>
 
             <div class="input-group mt-3 mb-3">
-              <input type="text" id="pop_message" class="get-tuch" required />
-              <label for="pop_message" class="input-group_label">Enter Message</label>
+              <input type="text"  id="qMessagemodal2" name="message..." class="get-tuch" required />
+              <label for="message" class="input-group_label">Enter Message</label>
             </div>
 
             <button class="btn_submit mt-3 mb-3 get-tuch-btn" id="SubmitQuerymodal2">Submit</button>
@@ -868,4 +868,45 @@ close
 <script src="js/main.js"></script>
 <script src="js/gallary.js"></script>
 
+<script type="text/javascript" language="javascript" defer>
+  var versionUpdate = (new Date()).getTime();
+  var script = document.createElement("script");
+  script.type = "text/javascript";
+  script.src = "https://api2.gtftech.com/scripts/queryform.min.ssl.js?v=" + versionUpdate;
+  document.body.appendChild(script);
+</script>
+
+
+<script>
+  var AgentInfo = {
+    "vAgentID": "0000",
+    "vProject": "Project name",
+    "vURL": "",
+    "thankspageurl": "/thanks.htm",
+  };
+  //Needs to be duplicate in the case of multiple forms on the same page
+  //--------------------------------------------------------------------------------------//
+  $('#preferedtime').hide();
+  $("#SubmitQuerymodal1").click(function () {
+    var FormInfo = {
+      "SenderControlID": "qSenderNamemodal1",
+      "SenderControlMobileID": "qMobileNomodal1",
+      "SenderControlEmailID": "qEmailIDmodal1",
+      "SenderControlMsgID": "qMessagemodal1"
+    };
+    SubmitQueryData(AgentInfo, FormInfo);
+
+  });
+
+    $("#SubmitQuerymodal2").click(function () {
+    var FormInfo = {
+      "SenderControlID": "qSenderNamemodal2",
+      "SenderControlMobileID": "qMobileNomodal2",
+      "SenderControlEmailID": "qEmailIDmodal2",
+      "SenderControlMsgID": "qMessagemodal2"
+    };
+    SubmitQueryData(AgentInfo, FormInfo);
+
+  });
+  </script>
 </html>
